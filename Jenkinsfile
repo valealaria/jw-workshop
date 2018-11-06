@@ -23,7 +23,7 @@ pipeline {
         }
       }
     }
-    stage('Deploy to VKE cluster') {
+    stage('Deploy to Cloud PKS cluster') {
       steps {
         container('vke-kubectl'){
           withCredentials([usernamePassword(credentialsId: 'VCS', usernameVariable: 'orgID', passwordVariable: 'apiToken')]) {
